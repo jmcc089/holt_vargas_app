@@ -278,9 +278,10 @@
 </div>
 
 <script>
-  const SUPABASE_URL = 'https://mjfvjogsknnuizsoygpp.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qZnZqb2dza25udWl6c295Z3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk0NzM2MjUsImV4cCI6MjA5NTA0OTYyNX0.vVnVSTjOhOVuLMIiV-23VFUiAvbE5Ib2UE_eZfMqflc';
-
+  const SUPABASE_URL = "__RAILWAY_URL__";
+  const SUPABASE_KEY = "__RAILWAY_KEY__";
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+            
   let allReviews = [];
   let allClients = [];
   let currentTab = 'queue';

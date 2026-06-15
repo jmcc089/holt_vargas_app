@@ -1,8 +1,9 @@
 {
-  "name": "holt-vargas-dashboard",
+  "name": "holt-vargas-dashboard,
   "version": "1.0.0",
   "scripts": {
-    "start": "npx serve . -p $PORT"
+    "build": "sed -i \"s|__RAILWAY_URL__|$SUPABASE_URL|g\" index.html && sed -i \"s|__RAILWAY_KEY__|$SUPABASE_KEY|g\" index.html",
+    "start": "serve . -p $PORT"
   },
   "dependencies": {
     "serve": "^14.2.0"
